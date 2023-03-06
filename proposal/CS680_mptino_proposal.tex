@@ -1,0 +1,92 @@
+\documentclass[twoside,11pt]{article}
+
+\usepackage{blindtext}
+
+% Any additional packages needed should be included after jmlr2e.
+% Note that jmlr2e.sty includes epsfig, amssymb, natbib and graphicx,
+% and defines many common macros, such as 'proof' and 'example'.
+%
+% It also sets the bibliographystyle to plainnat; for more information on
+% natbib citation styles, see the natbib documentation, a copy of which
+% is archived at http://www.jmlr.org/format/natbib.pdf
+
+% Available options for package jmlr2e are:
+%
+%   - abbrvbib : use abbrvnat for the bibliography style
+%   - nohyperref : do not load the hyperref package
+%   - preprint : remove JMLR specific information from the template,
+%         useful for example for posting to preprint servers.
+%
+% Example of using the package with custom options:
+%
+% \usepackage[abbrvbib, preprint]{jmlr2e}
+
+\usepackage{jmlr2e}
+
+% Definitions of handy macros can go here
+
+\newcommand{\dataset}{{\cal D}}
+\newcommand{\fracpartial}[2]{\frac{\partial #1}{\partial  #2}}
+
+% Heading arguments are {volume}{year}{pages}{date submitted}{date published}{paper id}{author-full-names}
+
+\usepackage{lastpage}
+%\jmlrheading{23}{2022}{1-\pageref{LastPage}}{1/21; Revised 5/22}{9/22}{21-0000}{Author One and Author Two}
+
+% Short headings should be running head and authors last names
+
+\ShortHeadings{Identifying defects in self-assembled nanomaterials}{Tino}
+\firstpageno{1}
+
+\begin{document}
+
+\title{Identifying defects in self-assembled nanomaterials using a novel Convolutional Neural Network}
+
+\author{\name Matthew Peres Tino \email mptino@uwaterloo.ca \\
+       \addr Department of Chemical Engineering\\
+       University of Waterloo\\
+       Waterloo, Ontario, N2L 3G1, Canada}
+
+\editor{Not applicable}
+
+\maketitle
+
+% \begin{abstract}%   <- trailing '%' for backward compatibility of .sty file
+% \blindtext
+% \end{abstract}
+
+% \begin{keywords}
+%   keyword one, keyword two, keyword three
+% \end{keywords}
+
+
+\section{Problem Statement}
+
+Self-assembled nanomaterials refer to the spontaneous structural organization of materials at the nanoscale, often resulting in patterns of repeating units (\cite{Li2019, Amadi2022}).  They represent a very important class of nanomaterials with significant applications, such as nanomedicine and drug delivery (\cite{Amadi2022}). 
+
+Although image-based characterization techniques for nanotechnology and nanoscience, such as Scanning Electron Microscopy (SEM), are reliable and mature, post-processing of these images to quantify structure-property relationships is an underdeveloped research area (\cite{Abukhdeir2016}). A robust and unsupervised defect identification scheme, which does not currently exist for self-assembled nanomaterials, would greatly improve post-processing of these images.
+
+One such solution to this problem uses a set of orthogonal basis functions called \textit{shapelets} as kernels in convolution (\cite{rob, thomas}). After selecting a reference region in the pattern that is defect-free, a comparison scheme called the Response Distance Method is used to compare convolutional responses at each pixel and identify areas of similarity (and dissimilarity). Algorithm limitations include (i) supervised learning and (ii) significant noise in the defect identification output.
+
+In similar work (but not for self-assembled nanomaterials), there are few worthy attempts to identify material defects using Convolutional Neural Networks (CNNs) (\cite{Chowdhury2016, Dong2020, Boyadjian2020}). Due to limited inventory of microscopic material images, these networks either (i) partitioned existing images into smaller portions or (ii) used previously trained CNN architectures, such as AlexNET. This raises significant issues, as the partitioning of existing images does not truly introduce different topologies to the network. Furthermore, using previously trained CNN architectures `out of the box' may not perform as intended. 
+
+
+\section{Methodology}
+
+A novel CNN-based network trained solely on \textit{synthetic data} will be designed from scratch to identify defects in self-assembled nanomaterials and their unique spontaneous patterns (hexagonal, stripe, square, etc.). Thousands of pattern images that mimic self-assembly nanomaterials will be synthetically generated using methods described in \cite{Stein1989} and \cite{Gunaratne1994}. Starting with perfect patterns, these patterns will be rotated, vary in feature scale, and include combinations of perfect and imperfect patterns to model defects observed in real self-assembled nanomaterials while providing rigourous training to the network. The CNN will likely contain two stages: (i) classification of the input image into its dominant repeating pattern (i.e, hexagonal, square) and (ii) identification of defect regions. If time permits, an additional stage will include the classification of these defects in relation to fundamental material science (i.e., dislocations, disclinations, voids, etc.). 
+
+% Acknowledgements and Disclosure of Funding should go at the end, before appendices and references
+
+%\acks{Any acknowledgements go here}
+
+
+% \appendix
+% \section{}
+% if needed
+
+
+
+\vskip 0.2in
+\bibliography{CS680_mptino_proposal}
+
+\end{document}

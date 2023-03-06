@@ -1,0 +1,71 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abukhdeir(2016)]{Abukhdeir2016}
+Nasser~Mohieddin Abukhdeir.
+\newblock Computational characterization of ordered nanostructured surfaces.
+\newblock \emph{Materials Research Express}, 3\penalty0 (8):\penalty0 082001,
+  2016.
+
+\bibitem[Akdeniz et~al.(2018)Akdeniz, Lizotte, and Abukhdeir]{thomas}
+Thomas~J Akdeniz, Daniel~J Lizotte, and Nasser~Mohieddin Abukhdeir.
+\newblock A generalized shapelet-based method for analysis of nanostructured
+  surface imaging.
+\newblock \emph{Nanotechnology}, 30\penalty0 (7):\penalty0 075703, 2018.
+
+\bibitem[Amadi et~al.(2022)Amadi, Venkataraman, and Papadopoulos]{Amadi2022}
+Eberechukwu~Victoria Amadi, Anusha Venkataraman, and Chris Papadopoulos.
+\newblock Nanoscale self-assembly: concepts, applications and challenges.
+\newblock \emph{Nanotechnology}, 33\penalty0 (13):\penalty0 132001, 2022.
+
+\bibitem[Boyadjian et~al.(2020)Boyadjian, Vanderesse, Toews, and
+  Bocher]{Boyadjian2020}
+Quentin Boyadjian, Nicolas Vanderesse, Matthew Toews, and Philippe Bocher.
+\newblock Detecting defects in materials using deep convolutional neural
+  networks.
+\newblock In \emph{Image Analysis and Recognition: 17th International
+  Conference, ICIAR 2020, P{\'o}voa de Varzim, Portugal, June 24--26, 2020,
+  Proceedings, Part I 17}, pages 293--306. Springer, 2020.
+
+\bibitem[Chowdhury et~al.(2016)Chowdhury, Kautz, Yener, and
+  Lewis]{Chowdhury2016}
+Aritra Chowdhury, Elizabeth Kautz, B{\"u}lent Yener, and Daniel Lewis.
+\newblock Image driven machine learning methods for microstructure recognition.
+\newblock \emph{Computational Materials Science}, 123:\penalty0 176--187, 2016.
+
+\bibitem[Dong et~al.(2020)Dong, Taylor, and Cootes]{Dong2020}
+Xinghui Dong, Christopher~J Taylor, and Tim~F Cootes.
+\newblock Defect detection and classification by training a generic
+  convolutional neural network encoder.
+\newblock \emph{IEEE Transactions on Signal Processing}, 68:\penalty0
+  6055--6069, 2020.
+
+\bibitem[Gunaratne et~al.(1994)Gunaratne, Ouyang, and Swinney]{Gunaratne1994}
+Gemunu~H Gunaratne, Qi~Ouyang, and Harry~L Swinney.
+\newblock Pattern formation in the presence of symmetries.
+\newblock \emph{Physical Review E}, 50\penalty0 (4):\penalty0 2802, 1994.
+
+\bibitem[Li et~al.(2019)Li, An, Peng, Zheng, and Wang]{Li2019}
+Li-Li Li, Hong-Wei An, Bo~Peng, Rui Zheng, and Hao Wang.
+\newblock Self-assembled nanomaterials: design principles, the nanostructural
+  effect, and their functional mechanisms as antimicrobial or detection agents.
+\newblock \emph{Materials Horizons}, 6\penalty0 (9):\penalty0 1794--1811, 2019.
+
+\bibitem[Stein(1989)]{Stein1989}
+Daniel~L. Stein.
+\newblock \emph{Lectures in the Sciences of Complexity the Proceeding of the
+  1988 Complex Systems Summer School, Held June-July, 1988 in Santa Fe, New
+  Mexico}.
+\newblock 1989.
+
+\bibitem[Suderman et~al.(2015)Suderman, Lizotte, and Abukhdeir]{rob}
+Robert Suderman, Daniel~J Lizotte, and Nasser~Mohieddin Abukhdeir.
+\newblock Theory and application of shapelets to the analysis of surface
+  self-assembly imaging.
+\newblock \emph{Physical Review E}, 91\penalty0 (3):\penalty0 033307, 2015.
+
+\end{thebibliography}
