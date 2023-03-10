@@ -1,5 +1,12 @@
-# hold functions from previous work that may be useful for this project
+'''
+Filename: pattern_generation.py
+Author: Matthew Peres Tino
+Description: Holds functions for pattern generation
+
+'''
+
 from scipy.ndimage import rotate
+import matplotlib.pyplot as plt
 import numpy as np
 
 def rotateOriginalSize(s, angle):
@@ -69,6 +76,45 @@ def genFourierPattern(a, l):
                    
     return(f)
 
+def genMesh(F, x, y, Nx, Ny):
+    """
+    Generates a rectangular mesh that discretizes a given function.
+    Essentially this is used to project a continuous function onto a
+    discrete domain.
+    
+    Parameters
+    ----------
+    F : function
+        The function to project.
+    x : list
+        The bounds for the first variable. Example: [0, 1]
+    y : list
+        The bounds for the second variable.
+    Nx : int
+        The number of points to discretize x by.
+    Ny : int
+        The number of points to discretize y by.
+    
+    Returns
+    -------
+    X : np.ndarray
+        The grid for the first variable.
+    Y : np.ndarray
+        The grid for the second variable.
+    M : np.ndarray
+        An Nx*Ny matrix for F projected onto a discrete domain.
+    """
+    # Create variable space
+    x_rng = np.linspace(x[0], x[1], Nx)
+    y_rng = np.linspace(y[0], y[1], Ny)
+    X,Y = np.meshgrid(x_rng, y_rng)
+    
+    #return (X, Y, F(X,Y))
+    return F(X,Y)
+
 if __name__ == "__main__":
-    pattern = genFourierPattern([1,2,3], 20)
-    breakpoint()
+    pattern = genFourierPattern([1,50,0], 20)
+    N = 250
+    discPattern = np.real(genMesh(pattern, x = [-(N-1)/2.0, (N-1)/2.0], y = [-(N-1)/2.0, (N-1)/2.0], Nx = N, Ny = N))
+    plt.imshow(discPattern,cmap='gray')
+    plt.show()
