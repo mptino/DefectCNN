@@ -21,8 +21,8 @@ def genFourierPattern(sym, lamb, theta=0):
     lamb : float
         The wavelength of the pattern (unitless).
     theta : int or float
-        The angle (in degrees) of which we wish to CCW rotate the pattern.
-        Default = 0 degrees.
+        The angle (in radians) of which we wish to CCW rotate the pattern.
+        Default = 0 radians.
     
     Returns
     -------
@@ -36,7 +36,6 @@ def genFourierPattern(sym, lamb, theta=0):
 
     # if we need to rotate basis vectors, apply rotation matrix in 2D euclidean space
     if theta != 0:
-        theta *= np.pi / 180 # convert to radian
         rotmat = np.array([[np.cos(theta), np.sin(theta)], [-np.sin(theta), np.cos(theta)]])
         e1 = np.dot(rotmat,e1)
         e2 = np.dot(rotmat,e2) 
